@@ -43,7 +43,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm) 0 0 0;
-    background-color: var(--purple-1);
+    background-color: var(--bg-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,6 +117,41 @@ p {
     margin: var(--spacing-md) 0;
 }
 
+/* Layout styles */
+.section-container {
+    width: 100%;
+    max-width: var(--standard-width);
+}
+
+.two-column {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.two-column > .col-left {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.two-column > .col-right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .subtitle {
     color: var(--purple-1);
     font-family: var(--heading-font);
@@ -142,6 +177,7 @@ p {
     letter-spacing: 0.25px;
 }
 
+/* Button styles */
 .primary-button {
     font-family: var(--body-font);
     font-size: var(--button-size);
@@ -191,6 +227,7 @@ p {
     transform: translateX(4px);
 }
 
+
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -223,4 +260,47 @@ p {
 
 .navbar-button:hover {
     background: rgba(250, 250, 250, 0.5);
+}
+
+/* HERO STyles */
+main {
+    margin: var(--spacing-xl) 0;
+}
+.button-container {
+    display: flex;
+    margin: var(--spacing-md) 0;
+}
+
+.button-container button:nth-of-type(2) {
+    margin: 0 0 0 var(--spacing-md);
+    color: var(--purple-2)
+}
+
+.hero p {
+    max-width: 480px;
+}
+
+.hero .hero-phone-container {
+    height: 564px;
+    align-items: flex-end;
+}
+
+.hero-phone {
+    height: 628px;
+    transform: translate(32px -32px);
+}
+
+/* Partners section */
+.partners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: var(--spacing-xl) 0;
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-lg);
+}
+
+.partners-grid img {
+    height: 60px;
+    place-self: center;
 }
